@@ -1,8 +1,8 @@
-platform :ios, '14.0'
+platform :ios, '13.0'
 
 use_frameworks!
 
-workspace 'Contacts'
+workspace 'App'
 
 def core_pods
   pod 'SwiftLint', :configurations => ['Debug']
@@ -38,8 +38,8 @@ target 'Presentation' do
   presentation_pods
 end
 
-target 'Contacts' do
-  project 'Contacts.project'
+target 'App' do
+  project 'App.project'
   core_pods
   presentation_pods
 end

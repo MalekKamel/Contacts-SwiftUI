@@ -58,6 +58,9 @@
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 
+	<key>NSContactsUsageDescription</key>
+	<string>Access must be granted to fetch contact.</string>
+
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

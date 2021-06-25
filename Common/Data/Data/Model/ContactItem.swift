@@ -6,11 +6,11 @@ import Foundation
 import ModelsMapper
 
 public struct ContactItem: Identifiable {
-    public var id: Int
+    public var id: String
     public var name: String
     public var phone: String
 
-    public init(id: Int, name: String, phone: String) {
+    public init(id: String, name: String, phone: String) {
         self.id = id
         self.name = name
         self.phone = phone

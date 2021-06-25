@@ -1,5 +1,5 @@
 //
-//  FreshRecipesView.swift
+//  HomeScreen.swift
 //
 //  Created by Shaban kamel on 30/3/21.
 //
@@ -11,11 +11,24 @@ struct HomeScreen: AppScreen {
     @State public var route: Route? = nil
 
     func ContentView() -> AnyView {
-        EmptyView().eraseToAnyView()
+        List {
+            ForEach(vm.contacts) { item in
+                VStack {
+                    Text(item.name)
+                    Text(item.phone)
+                }.frame(maxWidth: .infinity)
+            }
+        }.eraseToAnyView()
     }
 
     func onContentAppear() {
+        loadContacts()
+    }
 
+    private func loadContacts() {
+        ContactsRetriever().grantPermission { isGranted in
+            vm.loadContacts()
+        }
     }
 }
 

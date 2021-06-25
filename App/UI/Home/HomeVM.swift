@@ -11,10 +11,19 @@ class HomeVM: AppViewModel {
     public var dataManager: DataManager
     public var requester: CombineRequester
 
+    @Published private(set) var contacts = [ContactItem]()
 
     init(dataManager: DataManager, requester: CombineRequester) {
         self.dataManager = dataManager
         self.requester = requester
+    }
+
+    func loadContacts() {
+        request(dataManager.contactsRepo.loadContacts())
+                .sink(receiveValue: { value in
+                    self.contacts = value
+                })
+                .store(in: &bag)
     }
 
 }

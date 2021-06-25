@@ -14,4 +14,10 @@ class ContactsDataSrc {
         self.api = api
     }
 
+    func loadContacts() -> AnyPublisher<[ContactItem], MoyaError> {
+        Future { promise in
+            promise(.success([]))
+        }.eraseToAnyPublisher()
+    }
+
 }

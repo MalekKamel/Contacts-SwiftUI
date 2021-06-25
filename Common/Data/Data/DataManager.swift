@@ -5,6 +5,6 @@
 import Foundation
 
 public struct DataManager {
-    public lazy var menuRepo: ContactsRepo = { ContactsRepo.build() }()
+    public lazy var contactsRepo: ContactsRepo = { ContactsRepo.build() }()
     public static func create() -> DataManager { DataManager() }
 }

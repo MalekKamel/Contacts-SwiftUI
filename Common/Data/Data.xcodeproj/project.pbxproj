@@ -18,13 +18,14 @@
 		18C1B7FF2615F30900F31A57 /* Pods_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7848DDFDA5528288903C2021 /* Pods_Data.framework */; };
 		58B83260C6211194EE89E1F0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B837575055A93FCDD3071F /* DataManager.swift */; };
 		58B833E1E5752B4919716EF3 /* ContactsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8300B4BDDD7F8FBE49696 /* ContactsResponse.swift */; };
-		58B834424808190B7AABD160 /* ContactsDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B835564B81F611E0E6764E /* ContactsDataSrc.swift */; };
 		58B83705CDEDA41FEA9FBA02 /* MoyaProvider+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8355E35DC16255DE28C9A /* MoyaProvider+Request.swift */; };
-		58B8375DEE8C538C6EB75E47 /* ContactsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83F6C0917A2847DCB9C92 /* ContactsApi.swift */; };
 		58B8379FBA38A18405E2F284 /* MoyaPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B836E23735662F85A2422E /* MoyaPublisher.swift */; };
-		58B8380AC8C975C1073A0AAA /* ContactsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83087E0BCED32E61CA0C0 /* ContactsRepo.swift */; };
+		58B837BB13DA562F16AD681B /* ContactsRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83D4AAFAEA65778EFC234 /* ContactsRetriever.swift */; };
 		58B83C01B5D03F1A31811BB3 /* ContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83FAF133C67FDB5E6B748 /* ContactItem.swift */; };
+		58B83D17389EF55ED3F27040 /* ContactsDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83A7DDE1D4E52E87EFBD6 /* ContactsDataSrc.swift */; };
 		58B83D29B6C14CC601810033 /* MoyaProvider+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83D30786FA277DE4F1739 /* MoyaProvider+Create.swift */; };
+		58B83DB06A9C1F27513217E8 /* ContactsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83F778FACBB389B195023 /* ContactsApi.swift */; };
+		58B83DDDF12F6905C4465AC2 /* ContactsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83B12611474B8AD76514E /* ContactsRepo.swift */; };
 		58B83EF7498B35C2F88B9DE3 /* MoyaTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B830A4FA877CADC9A11E8C /* MoyaTargetType.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,14 +66,15 @@
 		18BA8F282613ABC500F20689 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		51B87D8F7A0A784C2430FEA6 /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
 		58B8300B4BDDD7F8FBE49696 /* ContactsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsResponse.swift; sourceTree = "<group>"; };
-		58B83087E0BCED32E61CA0C0 /* ContactsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsRepo.swift; sourceTree = "<group>"; };
 		58B830A4FA877CADC9A11E8C /* MoyaTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaTargetType.swift; sourceTree = "<group>"; };
-		58B835564B81F611E0E6764E /* ContactsDataSrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDataSrc.swift; sourceTree = "<group>"; };
 		58B8355E35DC16255DE28C9A /* MoyaProvider+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Request.swift"; sourceTree = "<group>"; };
 		58B836E23735662F85A2422E /* MoyaPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaPublisher.swift; sourceTree = "<group>"; };
 		58B837575055A93FCDD3071F /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		58B83A7DDE1D4E52E87EFBD6 /* ContactsDataSrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDataSrc.swift; sourceTree = "<group>"; };
+		58B83B12611474B8AD76514E /* ContactsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsRepo.swift; sourceTree = "<group>"; };
 		58B83D30786FA277DE4F1739 /* MoyaProvider+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Create.swift"; sourceTree = "<group>"; };
-		58B83F6C0917A2847DCB9C92 /* ContactsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsApi.swift; sourceTree = "<group>"; };
+		58B83D4AAFAEA65778EFC234 /* ContactsRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsRetriever.swift; sourceTree = "<group>"; };
+		58B83F778FACBB389B195023 /* ContactsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsApi.swift; sourceTree = "<group>"; };
 		58B83FAF133C67FDB5E6B748 /* ContactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactItem.swift; sourceTree = "<group>"; };
 		7848DDFDA5528288903C2021 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		933829EAF7A5F88A6B663629 /* Pods-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.debug.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				58B83CBA97FC29045D226D50 /* Model */,
 				58B839A736A99B1FCF039E13 /* Network */,
 				58B837575055A93FCDD3071F /* DataManager.swift */,
+				58B83FAB68E6819D6FF171B5 /* Domain */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -161,10 +164,20 @@
 			path = /Users/apple/Desktop/dev/iOS/me/oss/projects/Contacts/Common/Data/Data/Resources;
 			sourceTree = "<absolute>";
 		};
+		58B83652E77DBBB776BAD161 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				58B83F778FACBB389B195023 /* ContactsApi.swift */,
+				58B83B12611474B8AD76514E /* ContactsRepo.swift */,
+				58B83A7DDE1D4E52E87EFBD6 /* ContactsDataSrc.swift */,
+				58B83D4AAFAEA65778EFC234 /* ContactsRetriever.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
 		58B839A736A99B1FCF039E13 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				58B83C10F83EE1C4564BB9FB /* Domain */,
 				58B83B002DA4870E052EDECA /* Moya */,
 			);
 			path = Network;
@@ -181,14 +194,6 @@
 			path = Moya;
 			sourceTree = "<group>";
 		};
-		58B83C10F83EE1C4564BB9FB /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				58B83CD959A9BE9DAA5F648D /* Contacts */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		58B83CBA97FC29045D226D50 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,14 +203,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		58B83CD959A9BE9DAA5F648D /* Contacts */ = {
+		58B83FAB68E6819D6FF171B5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				58B83F6C0917A2847DCB9C92 /* ContactsApi.swift */,
-				58B83087E0BCED32E61CA0C0 /* ContactsRepo.swift */,
-				58B835564B81F611E0E6764E /* ContactsDataSrc.swift */,
+				58B83652E77DBBB776BAD161 /* Contacts */,
 			);
-			path = Contacts;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		B3E73A74771BA718F51B199F /* Pods */ = {
@@ -359,13 +362,14 @@
 				58B83C01B5D03F1A31811BB3 /* ContactItem.swift in Sources */,
 				58B833E1E5752B4919716EF3 /* ContactsResponse.swift in Sources */,
 				58B83260C6211194EE89E1F0 /* DataManager.swift in Sources */,
-				58B8375DEE8C538C6EB75E47 /* ContactsApi.swift in Sources */,
-				58B8380AC8C975C1073A0AAA /* ContactsRepo.swift in Sources */,
-				58B834424808190B7AABD160 /* ContactsDataSrc.swift in Sources */,
 				58B8379FBA38A18405E2F284 /* MoyaPublisher.swift in Sources */,
 				58B83EF7498B35C2F88B9DE3 /* MoyaTargetType.swift in Sources */,
 				58B83D29B6C14CC601810033 /* MoyaProvider+Create.swift in Sources */,
 				58B83705CDEDA41FEA9FBA02 /* MoyaProvider+Request.swift in Sources */,
+				58B83DB06A9C1F27513217E8 /* ContactsApi.swift in Sources */,
+				58B83DDDF12F6905C4465AC2 /* ContactsRepo.swift in Sources */,
+				58B83D17389EF55ED3F27040 /* ContactsDataSrc.swift in Sources */,
+				58B837BB13DA562F16AD681B /* ContactsRetriever.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

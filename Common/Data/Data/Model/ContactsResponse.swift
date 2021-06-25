@@ -5,7 +5,7 @@
 import Foundation
 
 public struct ContactsResponse: Decodable {
-    public var id: Int
+    public var id: String
     public var name: String
     public var phone: String
 }
