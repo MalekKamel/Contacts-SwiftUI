@@ -4,7 +4,7 @@ Contacts app represents a real world app example. it provides a fairly complex s
 
  ## Modular Architecture
  
- <img src="https://github.com/ShabanKamell/Contacts/blob/master/blob/modular-arch-diagram.png?raw=true" height="600">
+ <img src="https://github.com/ShabanKamell/Contacts-SwiftUI/blob/master/blob/modular-arch-diagram.png?raw=true" height="600">
  
  
  ## Stack:
