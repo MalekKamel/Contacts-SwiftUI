@@ -17,6 +17,7 @@
 		18BA8F0C2613ABB900F20689 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA8F0A2613ABB800F20689 /* L10n.swift */; };
 		29E730CF782C6E567A31DAA4 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F584CF6137ABD47A5D6FF5 /* Pods_Core.framework */; };
 		58B8308CF6DA6A3643C9292C /* CombineAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83DE7997A8A9B0114F68A /* CombineAlias.swift */; };
+		58B830A937A0AE73663A21F7 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B834DCE274A4231E1BBC61 /* BackgroundTask.swift */; };
 		58B83EF323F2416BF09200EC /* AppCrashlytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8302DA7C95AC53712BC47 /* AppCrashlytics.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		18BA8F0A2613ABB800F20689 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		28D97C12CB14767ACE8BB78F /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		58B8302DA7C95AC53712BC47 /* AppCrashlytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCrashlytics.swift; sourceTree = "<group>"; };
+		58B834DCE274A4231E1BBC61 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		58B83DE7997A8A9B0114F68A /* CombineAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineAlias.swift; sourceTree = "<group>"; };
 		80F584CF6137ABD47A5D6FF5 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 				18BA8BD3261375F700F20689 /* Info.plist */,
 				58B833CBF0977DD6FA909DFD /* Extensions */,
 				58B83D37735F0D4DEA69F8C1 /* Crashlytics */,
+				58B83C1BB77A92FC93A51539 /* BackgroundTask */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -148,6 +151,14 @@
 				58B83DE7997A8A9B0114F68A /* CombineAlias.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		58B83C1BB77A92FC93A51539 /* BackgroundTask */ = {
+			isa = PBXGroup;
+			children = (
+				58B834DCE274A4231E1BBC61 /* BackgroundTask.swift */,
+			);
+			path = BackgroundTask;
 			sourceTree = "<group>";
 		};
 		58B83D37735F0D4DEA69F8C1 /* Crashlytics */ = {
@@ -300,6 +311,7 @@
 				18BA8F0B2613ABB900F20689 /* Assets.swift in Sources */,
 				58B8308CF6DA6A3643C9292C /* CombineAlias.swift in Sources */,
 				58B83EF323F2416BF09200EC /* AppCrashlytics.swift in Sources */,
+				58B830A937A0AE73663A21F7 /* BackgroundTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

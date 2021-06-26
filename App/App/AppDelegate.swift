@@ -12,6 +12,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
 
     private func setup() {
+        ContactsBackgroundSynchronizer.shared.start()
         UITableView.removeHeader()
     }
 }
