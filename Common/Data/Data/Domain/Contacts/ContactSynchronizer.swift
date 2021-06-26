@@ -6,7 +6,7 @@ import Combine
 import Core
 
 public protocol ContactSynchronizerContract {
-    mutating func sync() -> AnyPublisher<ContactSyncResult, Error>
+     func sync() -> AnyPublisher<ContactSyncResult, Error>
 }
 
 public struct ContactSynchronizer: ContactSynchronizerContract {
@@ -19,10 +19,10 @@ public struct ContactSynchronizer: ContactSynchronizerContract {
         self.storeDataSrc = storeDataSrc
     }
 
-    public mutating func sync() -> AnyPublisher<ContactSyncResult, Error> {
+    public  func sync() -> AnyPublisher<ContactSyncResult, Error> {
         Publishers.Zip(localDataSrc.all(), storeDataSrc.all())
                 .map { localItems, storeItems in
-                    ContactSyncResult(new: [], modified: [], deleted: [])
+                    sync(localItems: localItems, storeItems: storeItems)
                 }.eraseToAnyPublisher()
     }
 
@@ -47,10 +47,13 @@ public struct ContactSynchronizer: ContactSynchronizerContract {
             // The item is not saved locally, it's a new one
             if localItem == nil {
                 newItems.append(storeItem)
+                continue
             }
 
+            let soreHash = storeItem.hashValue
+            let localHash = localItem.hashValue
             // The item is not modified, ignore it.
-            if storeItem.hashValue == localItem.hashValue {
+            if storeItem == localItem {
                 continue
             }
 
@@ -60,7 +63,7 @@ public struct ContactSynchronizer: ContactSynchronizerContract {
         // Find deleted items
         for localItem in localItems {
             let storeItem = storeItemsDict[localItem.id]
-            if storeItem == nil {
+            if storeItem != nil {
                 continue
             }
             deletedItems.append(localItem)

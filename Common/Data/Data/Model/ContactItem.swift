@@ -15,6 +15,12 @@ public struct ContactItem: Identifiable, Hashable {
         self.name = name
         self.phone = phone
     }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name)
+        hasher.combine(phone)
+    }
 }
 
 class ContactResponseMapper: Mapper {

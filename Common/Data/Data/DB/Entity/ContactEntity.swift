@@ -7,7 +7,7 @@ import RealmSwift
 import ModelsMapper
 
 @objcMembers
-public class ContactEntity: Object {
+public class ContactEntity: Object, Identifiable {
     public static let key = "ContactEntity.key"
 
     public dynamic var id: String = ""

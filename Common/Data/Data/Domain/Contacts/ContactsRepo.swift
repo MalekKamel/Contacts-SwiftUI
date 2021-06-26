@@ -9,7 +9,7 @@ import Moya
 
 public protocol ContactsRepoContract {
     func contacts() -> AnyPublisher<[ContactItem], MoyaError>
-    func sync() -> Bool
+    func sync() -> AnyPublisher<Bool, MoyaError>
 }
 
 public struct ContactsRepo: ContactsRepoContract {
@@ -55,8 +55,22 @@ public struct ContactsRepo: ContactsRepoContract {
                 .eraseToAnyPublisher()
     }
 
-    public func sync() -> Bool {
-        true
+    public func sync() -> AnyPublisher<Bool, MoyaError> {
+        synchronizer.sync()
+                .flatMap { result in
+                    Publishers.Zip3(
+                                    save(items: result.new),
+                                    update(items: result.modified),
+                                    delete(items: result.deleted))
+                            .map { _ in
+                                result.isModified()
+                            }
+                            .eraseToAnyPublisher()
+                }
+                .mapError { error in
+                    MoyaError.underlying(error, nil)
+                }
+                .eraseToAnyPublisher()
     }
 
     private func save(items: [ContactItem]) -> AnyPublisher<Void, Error> {

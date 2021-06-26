@@ -11,7 +11,7 @@ struct HomeScreen: AppScreen {
     @State public var route: Route? = nil
 
     func ContentView() -> AnyView {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             ForEach(vm.contacts) { item in
                 VStack {
                     Text(item.name)

@@ -20,8 +20,23 @@ class HomeVM: AppViewModel {
 
     func loadContacts() {
         request(dataManager.contactsRepo.contacts())
-                .sink(receiveValue: { value in
-                    self.contacts = value
+                .sink(receiveValue: { [weak self] value in
+                    self?.contacts = value
+                    self?.sync()
+                })
+                .store(in: &bag)
+    }
+
+    func sync() {
+        request(dataManager.contactsRepo.sync())
+                .sink(receiveValue: { [weak self] isModified in
+                    guard let self = self else {
+                        return
+                    }
+                    guard isModified else {
+                        return
+                    }
+                    self.loadContacts()
                 })
                 .store(in: &bag)
     }

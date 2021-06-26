@@ -59,7 +59,7 @@ public struct AppRealm {
         }.eraseToAnyPublisher()
     }
 
-    func delete<T: Object>(_ objects: [T]) -> AnyPublisher<Void, Error> {
+    func delete<T: Object>(_ objects: [T]) -> AnyPublisher<Void, Error> where T: Identifiable {
         Future { promise in
             realmQueue.async {
                 autoreleasepool {
@@ -67,7 +67,10 @@ public struct AppRealm {
                         let realm = try! Realm()
                         try realm.write {
                             for obj in objects {
-                                realm.delete(obj)
+                                let item = realm.object(ofType: T.self, forPrimaryKey: obj.id)
+                                if let toDelete = item {
+                                    realm.delete(toDelete)
+                                }
                             }
                         }
                         promise(.success(()))
