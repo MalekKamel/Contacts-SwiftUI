@@ -11,14 +11,16 @@ struct HomeScreen: AppScreen {
     @State public var route: Route? = nil
 
     func ContentView() -> AnyView {
-        List {
+        ScrollView {
             ForEach(vm.contacts) { item in
                 VStack {
                     Text(item.name)
                     Text(item.phone)
-                }.frame(maxWidth: .infinity)
+                }
+                        .frame(height: 70)
             }
-        }.eraseToAnyView()
+        }.frame(maxWidth: .infinity)
+                .eraseToAnyView()
     }
 
     func onContentAppear() {

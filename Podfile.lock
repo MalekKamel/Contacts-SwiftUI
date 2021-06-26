@@ -5,6 +5,11 @@ PODS:
     - Moya/Core
   - Moya/Core (15.0.0-alpha.1):
     - Alamofire (~> 5.0)
+  - Realm (10.8.0):
+    - Realm/Headers (= 10.8.0)
+  - Realm/Headers (10.8.0)
+  - RealmSwift (10.8.0):
+    - Realm (= 10.8.0)
   - SDWebImage (5.10.4):
     - SDWebImage/Core (= 5.10.4)
   - SDWebImage/Core (5.10.4)
@@ -19,6 +24,7 @@ PODS:
 DEPENDENCIES:
   - ModelsMapper
   - Moya/Combine (~> 15.0.0-alpha.1)
+  - RealmSwift
   - SDWebImageSwiftUI
   - SwiftGen (= 6.1.0)
   - SwiftLint
@@ -29,6 +35,8 @@ SPEC REPOS:
     - Alamofire
     - ModelsMapper
     - Moya
+    - Realm
+    - RealmSwift
     - SDWebImage
     - SDWebImageSwiftUI
     - SwiftGen
@@ -39,12 +47,14 @@ SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   ModelsMapper: 7c7f748889e5583c9c56002d67abb217e01d08e4
   Moya: 101c94dfb29289736ecd20fa6e82bea665e0671b
+  Realm: ad3c5cd762e5a5bc02080fc55aa04a0e43f98575
+  RealmSwift: 316e450478fb01e06ece4438dda42f407c5f51d2
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   SwiftMessages: b71f53eb919887c0273bf43cbc002bd4f0cfb3d6
 
-PODFILE CHECKSUM: 46df67c5461496dd74dc14b0f3df040a986cc87d
+PODFILE CHECKSUM: 37449313e3c0716b97f0db27c98c89394754369e
 
 COCOAPODS: 1.10.1

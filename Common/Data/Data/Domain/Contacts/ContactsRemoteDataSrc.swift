@@ -7,7 +7,7 @@ import Foundation
 import Combine
 import Moya
 
-class ContactsDataSrc {
+class ContactsRemoteDataSrc {
     let api: ContactsApiProvider
 
     init(api: ContactsApiProvider) {

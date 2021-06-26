@@ -14,6 +14,7 @@ def core_pods
 end
 
 def data_pods
+  pod 'RealmSwift'
   core_pods
 end
 
@@ -41,6 +42,7 @@ end
 target 'App' do
   project 'App.project'
   core_pods
+  data_pods
   presentation_pods
 end
 

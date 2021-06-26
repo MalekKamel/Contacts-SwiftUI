@@ -130,6 +130,7 @@
 
 /* Begin PBXFileReference section */
 		0C73BAD770CAA39817774A35 /* Pods-Contacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.debug.xcconfig"; path = "Target Support Files/Pods-Contacts/Pods-Contacts.debug.xcconfig"; sourceTree = "<group>"; };
+		180C701526877B770049082E /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BA8BE9261375F700F20689 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = Common/Core/Core.xcodeproj; sourceTree = "<group>"; };
 		18BA8C1B2613764000F20689 /* Presentation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Presentation.xcodeproj; path = Common/Presentation/Presentation.xcodeproj; sourceTree = "<group>"; };
 		18BA8C4D2613766F00F20689 /* Data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Data.xcodeproj; path = Common/Data/Data.xcodeproj; sourceTree = "<group>"; };
@@ -251,6 +252,7 @@
 		336A4BB5C9704C30D8B5CAE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				180C701526877B770049082E /* RealmSwift.framework */,
 				947124286BD98DE2EE869076 /* Pods_App.framework */,
 			);
 			name = Frameworks;

@@ -5,7 +5,7 @@
 import Foundation
 import ModelsMapper
 
-public struct ContactItem: Identifiable {
+public struct ContactItem: Identifiable, Hashable {
     public var id: String
     public var name: String
     public var phone: String
@@ -17,12 +17,15 @@ public struct ContactItem: Identifiable {
     }
 }
 
-class ContactItemMapper: Mapper {
+class ContactResponseMapper: Mapper {
     typealias I = ContactsResponse
     typealias O = ContactItem
 
     func map(_ input: ContactsResponse) -> ContactItem {
-        ContactItem(id: input.id, name: input.name, phone: input.phone)
+        ContactItem(
+                id: input.id,
+                name: input.name,
+                phone: input.phone)
     }
 }
 

@@ -19,7 +19,7 @@ class HomeVM: AppViewModel {
     }
 
     func loadContacts() {
-        request(dataManager.contactsRepo.loadContacts())
+        request(dataManager.contactsRepo.contacts())
                 .sink(receiveValue: { value in
                     self.contacts = value
                 })
