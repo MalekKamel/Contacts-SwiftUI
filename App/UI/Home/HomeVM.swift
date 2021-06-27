@@ -8,12 +8,12 @@ import Moya
 class HomeVM: AppViewModel {
     @Published public var loadState: LoadingState = .init()
     public var bag = CancelableBag()
-    public var dataManager: DataManager
+    public var dataManager: DataManagerContract
     public var requester: CombineRequester
 
     @Published private(set) var contacts = [ContactItem]()
 
-    init(dataManager: DataManager, requester: CombineRequester) {
+    init(dataManager: DataManagerContract, requester: CombineRequester) {
         self.dataManager = dataManager
         self.requester = requester
     }

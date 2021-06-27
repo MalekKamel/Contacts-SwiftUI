@@ -12,7 +12,7 @@ public protocol AppViewModel: ObservableObject, Presentable {
     var requester: CombineRequester { get }
     var loadState: LoadingState { get set }
     var bag: CancelableBag { get set }
-    var dataManager: DataManager { get set }
+    var dataManager: DataManagerContract { get set }
 
     func request<T>(_ api: AnyPublisher<T, MoyaError>, options: RequestOptions) -> AnyPublisher<T, Never>
 }

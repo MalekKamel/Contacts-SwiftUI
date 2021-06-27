@@ -4,7 +4,14 @@
 
 import Foundation
 
-public struct DataManager {
-    public lazy var contactsRepo: ContactsRepoContract = { ContactsRepo.build() }()
-    public static func create() -> DataManager { DataManager() }
+public protocol DataManagerContract {
+    var contactsRepo: ContactsRepoContract { get }
+}
+
+public struct DataManager: DataManagerContract {
+    public var contactsRepo: ContactsRepoContract = ContactsRepo.build()
+
+    public static func create() -> DataManagerContract {
+        DataManager()
+    }
 }
