@@ -8,7 +8,7 @@ public protocol ContactsStoreDataSrcContract {
     func all() -> AnyPublisher<[ContactItem], Error>
 }
 
-public class ContactsStoreDataSrc: ContactsStoreDataSrcContract {
+public struct ContactsStoreDataSrc: ContactsStoreDataSrcContract {
     let retriever: ContactsRetriever
 
     public init(retriever: ContactsRetriever) {

@@ -13,9 +13,9 @@ public protocol ContactsRepoContract {
 }
 
 public struct ContactsRepo: ContactsRepoContract {
-    let localDataSrc: ContactsLocalDataSrcContract
-    let storeDataSrc: ContactsStoreDataSrcContract
-    let synchronizer: ContactSynchronizerContract
+    private let localDataSrc: ContactsLocalDataSrcContract
+    private let storeDataSrc: ContactsStoreDataSrcContract
+    private let synchronizer: ContactSynchronizerContract
 
     public init(localDataSrc: ContactsLocalDataSrcContract,
                 storeDataSrc: ContactsStoreDataSrcContract,

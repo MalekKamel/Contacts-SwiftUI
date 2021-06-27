@@ -22,7 +22,7 @@ class HomeVMTests: XCTestCase {
         vm.loadContacts()
         let publisher = vm.$contacts.collectNext(2)
 
-        let items = try await(publisher)
+        let items = try awaitPublisher(publisher)
         XCTAssertEqual(items.count, 2)
         XCTAssertEqual(items.first, [ContactItem(id: "id", name: "name", phone: "phone"),
                                      ContactItem(id: "id2", name: "name", phone: "phone")])
@@ -32,7 +32,7 @@ class HomeVMTests: XCTestCase {
         vm.sync()
         let publisher = vm.$contacts.collectNext(2)
 
-        let items = try await(publisher)
+        let items = try awaitPublisher(publisher)
         XCTAssertEqual(items.count, 2)
         XCTAssertEqual(items.first, [ContactItem(id: "id", name: "name", phone: "phone"),
                                      ContactItem(id: "id2", name: "name", phone: "phone")])

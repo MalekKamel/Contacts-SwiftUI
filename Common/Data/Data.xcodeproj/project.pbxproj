@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186FA898268913C20035F673 /* XCTestCase+AwaitPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FA897268913C20035F673 /* XCTestCase+AwaitPublisher.swift */; };
+		186FA899268913C20035F673 /* Publisher+CollectNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FA896268913C20035F673 /* Publisher+CollectNext.swift */; };
 		18BA8C3D2613766F00F20689 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BA8C332613766F00F20689 /* Data.framework */; };
-		18BA8C422613766F00F20689 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA8C412613766F00F20689 /* DataTests.swift */; };
+		18BA8C422613766F00F20689 /* ContactsRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA8C412613766F00F20689 /* ContactsRepoTest.swift */; };
 		18BA8C442613766F00F20689 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 18BA8C362613766F00F20689 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18BA8E192613A2CE00F20689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BA8DE72613A01E00F20689 /* Assets.xcassets */; };
 		18BA8E1C2613A2D100F20689 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BA8DE82613A01E00F20689 /* Colors.xcassets */; };
@@ -63,11 +65,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		186FA896268913C20035F673 /* Publisher+CollectNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+CollectNext.swift"; sourceTree = "<group>"; };
+		186FA897268913C20035F673 /* XCTestCase+AwaitPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AwaitPublisher.swift"; sourceTree = "<group>"; };
 		18BA8C332613766F00F20689 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BA8C362613766F00F20689 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		18BA8C372613766F00F20689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BA8C3C2613766F00F20689 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18BA8C412613766F00F20689 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		18BA8C412613766F00F20689 /* ContactsRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRepoTest.swift; sourceTree = "<group>"; };
 		18BA8C432613766F00F20689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BA8C6F2613775300F20689 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BA8DE72613A01E00F20689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186FA895268913C10035F673 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				186FA897268913C20035F673 /* XCTestCase+AwaitPublisher.swift */,
+				186FA896268913C20035F673 /* Publisher+CollectNext.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		18BA8C292613766F00F20689 = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +170,8 @@
 		18BA8C402613766F00F20689 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				18BA8C412613766F00F20689 /* DataTests.swift */,
+				186FA895268913C10035F673 /* Util */,
+				18BA8C412613766F00F20689 /* ContactsRepoTest.swift */,
 				18BA8C432613766F00F20689 /* Info.plist */,
 			);
 			path = DataTests;
@@ -437,7 +451,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BA8C422613766F00F20689 /* DataTests.swift in Sources */,
+				186FA899268913C20035F673 /* Publisher+CollectNext.swift in Sources */,
+				186FA898268913C20035F673 /* XCTestCase+AwaitPublisher.swift in Sources */,
+				18BA8C422613766F00F20689 /* ContactsRepoTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +647,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Y3JCR9H63;
 				INFOPLIST_FILE = DataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,6 +666,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Y3JCR9H63;
 				INFOPLIST_FILE = DataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
