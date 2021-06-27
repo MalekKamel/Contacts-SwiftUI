@@ -25,10 +25,7 @@ class ContactsRepoTest: XCTestCase {
     }
 
     func testLoadContacts_shouldUpdateContacts() throws {
-
-        let publisher = repo.contacts()
-
-        let items: [ContactItem] = try awaitPublisher(publisher)
+        let items: [ContactItem] = try awaitPublisher(repo.contacts())
         XCTAssertEqual(items.count, 2)
         XCTAssertEqual(items, [ContactItem(id: "id", name: "name", phone: "phone"),
                                      ContactItem(id: "id2", name: "name", phone: "phone")])
