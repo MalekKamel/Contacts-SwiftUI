@@ -7,7 +7,6 @@
 import XCTest
 @testable import App
 import Combine
-import Moya
 import Presentation
 
 class HomeVMTests: XCTestCase {

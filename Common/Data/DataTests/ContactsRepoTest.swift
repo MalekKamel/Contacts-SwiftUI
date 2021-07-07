@@ -8,7 +8,6 @@
 import XCTest
 @testable import Data
 import Combine
-import Moya
 import Presentation
 
 class ContactsRepoTest: XCTestCase {

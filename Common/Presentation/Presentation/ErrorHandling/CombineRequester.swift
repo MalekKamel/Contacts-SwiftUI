@@ -3,7 +3,6 @@
 //
 
 import Combine
-import Moya
 import Data
 
 public typealias Request<T> = () -> AnyPublisher<T, AppError>

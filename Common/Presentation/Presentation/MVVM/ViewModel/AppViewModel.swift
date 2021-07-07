@@ -6,7 +6,6 @@ import SwiftUI
 import Data
 import Core
 import Combine
-import Moya
 
 public protocol AppViewModel: ObservableObject, Presentable {
     var requester: CombineRequester { get }

@@ -5,7 +5,6 @@
 
 import ModelsMapper
 import Combine
-import Moya
 
 public protocol ContactsRepoContract {
     func contacts() -> AnyPublisher<[ContactItem], AppError>
