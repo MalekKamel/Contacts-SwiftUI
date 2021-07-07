@@ -5,4 +5,4 @@
 
 import Combine
 
-public typealias DecodePublisher<T: Decodable> = AnyPublisher<T, Error>
+public typealias DecodePublisher<T: Decodable> = AnyPublisher<T, AppError>

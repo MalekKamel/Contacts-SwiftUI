@@ -14,7 +14,7 @@ public protocol AppViewModel: ObservableObject, Presentable {
     var bag: CancelableBag { get set }
     var dataManager: DataManagerContract { get set }
 
-    func request<T>(_ api: AnyPublisher<T, MoyaError>, options: RequestOptions) -> AnyPublisher<T, Never>
+    func request<T>(_ api: AnyPublisher<T, AppError>, options: RequestOptions) -> AnyPublisher<T, Never>
 }
 
 // MARK:- Presentable implementation
@@ -39,7 +39,7 @@ public extension AppViewModel {
 
 public extension AppViewModel {
 
-    func request<T>(_ api: AnyPublisher<T, MoyaError>,
+    func request<T>(_ api: AnyPublisher<T, AppError>,
                     options: RequestOptions = RequestOptions.defaultOptions()
     ) -> AnyPublisher<T, Never> {
         requester

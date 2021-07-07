@@ -8,8 +8,8 @@ import Combine
 import Moya
 
 public protocol ContactsRepoContract {
-    func contacts() -> AnyPublisher<[ContactItem], MoyaError>
-    func sync() -> AnyPublisher<Bool, MoyaError>
+    func contacts() -> AnyPublisher<[ContactItem], AppError>
+    func sync() -> AnyPublisher<Bool, AppError>
 }
 
 public struct ContactsRepo: ContactsRepoContract {
@@ -25,15 +25,15 @@ public struct ContactsRepo: ContactsRepoContract {
         self.synchronizer = synchronizer
     }
 
-    public func contacts() -> AnyPublisher<[ContactItem], MoyaError> {
+    public func contacts() -> AnyPublisher<[ContactItem], AppError> {
         localDataSrc.all()
                 .mapError { error in
-                    MoyaError.underlying(error, nil)
+                    error.toAppError
                 }
-                .flatMap { items -> AnyPublisher<[ContactItem], MoyaError> in
+                .flatMap { items -> AnyPublisher<[ContactItem], AppError> in
                     if !items.isEmpty {
                         return Just(items)
-                                .setFailureType(to: MoyaError.self)
+                                .setFailureType(to: AppError.self)
                                 .eraseToAnyPublisher()
                     }
                     return retrieveContactsAndSaveLocally()
@@ -41,7 +41,7 @@ public struct ContactsRepo: ContactsRepoContract {
                 .eraseToAnyPublisher()
     }
 
-    private func retrieveContactsAndSaveLocally() -> AnyPublisher<[ContactItem], MoyaError> {
+    private func retrieveContactsAndSaveLocally() -> AnyPublisher<[ContactItem], AppError> {
         storeDataSrc.all()
                 .flatMap { items in
                     save(items: items)
@@ -50,12 +50,12 @@ public struct ContactsRepo: ContactsRepoContract {
                             }
                 }
                 .mapError { error in
-                    MoyaError.underlying(error, nil)
+                    error.toAppError
                 }
                 .eraseToAnyPublisher()
     }
 
-    public func sync() -> AnyPublisher<Bool, MoyaError> {
+    public func sync() -> AnyPublisher<Bool, AppError> {
         synchronizer.sync()
                 .flatMap { result in
                     Publishers.Zip3(
@@ -68,7 +68,7 @@ public struct ContactsRepo: ContactsRepoContract {
                             .eraseToAnyPublisher()
                 }
                 .mapError { error in
-                    MoyaError.underlying(error, nil)
+                    error.toAppError
                 }
                 .eraseToAnyPublisher()
     }

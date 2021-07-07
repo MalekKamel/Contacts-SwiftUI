@@ -14,7 +14,7 @@ class ContactsRemoteDataSrc {
         self.api = api
     }
 
-    func loadContacts() -> AnyPublisher<[ContactItem], MoyaError> {
+    func loadContacts() -> AnyPublisher<[ContactItem], AppError> {
         Future { promise in
             promise(.success([]))
         }.eraseToAnyPublisher()

@@ -36,3 +36,4 @@ extension ContactsDao {
         ContactsDao(realm: AppRealm.shared)
     }
 }
+

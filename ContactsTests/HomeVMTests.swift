@@ -42,17 +42,17 @@ class HomeVMTests: XCTestCase {
 
 
 class FakeContactsRepo: ContactsRepoContract {
-    func contacts() -> AnyPublisher<[ContactItem], MoyaError> {
+    func contacts() -> AnyPublisher<[ContactItem], AppError> {
         let items = [ContactItem(id: "id", name: "name", phone: "phone"),
                      ContactItem(id: "id2", name: "name", phone: "phone")]
         return Just(items)
-                .setFailureType(to: MoyaError.self)
+                .setFailureType(to: AppError.self)
                 .eraseToAnyPublisher()
     }
 
-    func sync() -> AnyPublisher<Bool, MoyaError> {
+    func sync() -> AnyPublisher<Bool, AppError> {
         Just(true)
-                .setFailureType(to: MoyaError.self)
+                .setFailureType(to: AppError.self)
                 .eraseToAnyPublisher()
     }
 }

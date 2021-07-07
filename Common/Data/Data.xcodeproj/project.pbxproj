@@ -26,7 +26,10 @@
 		58B8379FBA38A18405E2F284 /* MoyaPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B836E23735662F85A2422E /* MoyaPublisher.swift */; };
 		58B837BB13DA562F16AD681B /* ContactsRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83D4AAFAEA65778EFC234 /* ContactsRetriever.swift */; };
 		58B83847C954BD88EDB36EA8 /* ContactSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83CDB8C215A8C6BA44F00 /* ContactSynchronizer.swift */; };
+		58B8393DEF731A7E2E5BFBF0 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B834B87B622F712A739BC5 /* Test.swift */; };
 		58B83A1C59D9BB6BDD5A89E9 /* Realm+Detach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B831D92D2B39EEC43A6E89 /* Realm+Detach.swift */; };
+		58B83B35825C1B0155A8AEA7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B832CBF97835D4D2B1C611 /* AppError.swift */; };
+		58B83BAB47C6C98BE5B7342C /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B838C8CD29D085D0429B76 /* HTTPStatusCode.swift */; };
 		58B83C01B5D03F1A31811BB3 /* ContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83FAF133C67FDB5E6B748 /* ContactItem.swift */; };
 		58B83C4B97CFA1F416786DDF /* ContactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83A0ADFE4BFB0EF1B60CA /* ContactEntity.swift */; };
 		58B83CCFAD4744EDBA28812C /* ContactDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8387CB555FC7BE9EA9824 /* ContactDao.swift */; };
@@ -81,7 +84,9 @@
 		58B8300B4BDDD7F8FBE49696 /* ContactsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsResponse.swift; sourceTree = "<group>"; };
 		58B830A4FA877CADC9A11E8C /* MoyaTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaTargetType.swift; sourceTree = "<group>"; };
 		58B831D92D2B39EEC43A6E89 /* Realm+Detach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Detach.swift"; sourceTree = "<group>"; };
+		58B832CBF97835D4D2B1C611 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		58B83386BDD0EC07985082F5 /* ContactsLocalDataSrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLocalDataSrc.swift; sourceTree = "<group>"; };
+		58B834B87B622F712A739BC5 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		58B8355E35DC16255DE28C9A /* MoyaProvider+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Request.swift"; sourceTree = "<group>"; };
 		58B836E23735662F85A2422E /* MoyaPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaPublisher.swift; sourceTree = "<group>"; };
 		58B837301EE85F6817E25A3C /* ContactsBackgroundSynchronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsBackgroundSynchronizer.swift; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 		58B838516AC70602F9C6D9FC /* AppRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRealm.swift; sourceTree = "<group>"; };
 		58B8385C877F7E11C6E02A74 /* ContactsStoreDataSrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsStoreDataSrc.swift; sourceTree = "<group>"; };
 		58B8387CB555FC7BE9EA9824 /* ContactDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDao.swift; sourceTree = "<group>"; };
+		58B838C8CD29D085D0429B76 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		58B83A0ADFE4BFB0EF1B60CA /* ContactEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactEntity.swift; sourceTree = "<group>"; };
 		58B83A7DDE1D4E52E87EFBD6 /* ContactsRemoteDataSrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsRemoteDataSrc.swift; sourceTree = "<group>"; };
 		58B83B12611474B8AD76514E /* ContactsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsRepo.swift; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 			children = (
 				58B8368EF910EC1630A9F94D /* Entity */,
 				58B8300DD5411F1EDFF7CDEF /* Realm */,
+				58B834B87B622F712A739BC5 /* Test.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -243,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				58B83B002DA4870E052EDECA /* Moya */,
+				58B838C8CD29D085D0429B76 /* HTTPStatusCode.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -264,6 +272,7 @@
 				58B83FAF133C67FDB5E6B748 /* ContactItem.swift */,
 				58B8300B4BDDD7F8FBE49696 /* ContactsResponse.swift */,
 				58B83D105A625E4772949EF2 /* ContactSyncResult.swift */,
+				58B832CBF97835D4D2B1C611 /* AppError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,6 +453,9 @@
 				58B83CCFAD4744EDBA28812C /* ContactDao.swift in Sources */,
 				58B83E808E3B6A040FD15CF4 /* AppRealm.swift in Sources */,
 				58B83EF826D8B22EA8A9D266 /* ContactsBackgroundSynchronizer.swift in Sources */,
+				58B8393DEF731A7E2E5BFBF0 /* Test.swift in Sources */,
+				58B83B35825C1B0155A8AEA7 /* AppError.swift in Sources */,
+				58B83BAB47C6C98BE5B7342C /* HTTPStatusCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

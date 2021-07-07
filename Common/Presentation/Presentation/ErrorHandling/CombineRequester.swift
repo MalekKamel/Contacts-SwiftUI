@@ -4,8 +4,9 @@
 
 import Combine
 import Moya
+import Data
 
-public typealias Request<T> = () -> AnyPublisher<T, MoyaError>
+public typealias Request<T> = () -> AnyPublisher<T, AppError>
 
 public struct CombineRequester {
     /// Set NSError handlers
@@ -18,7 +19,7 @@ public struct CombineRequester {
     }
 
     public func request<T>(
-            _ publisher: AnyPublisher<T, MoyaError>,
+            _ publisher: AnyPublisher<T, AppError>,
             options: RequestOptions = RequestOptions.defaultOptions(),
             presentable: Presentable? = nil
     ) -> AnyPublisher<T, Never> {
